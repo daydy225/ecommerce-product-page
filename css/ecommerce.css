@@ -1,0 +1,163 @@
+/*########### General styles setup ###########*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /*####### Body font familly #######*/
+    --fm-body: 'Kumbh Sans', sans-serif;
+
+    /*######## Primary Colors ########*/
+     --prim-orange: hsl(26, 100%, 55%);
+     --prim-pale-orange: hsl(25, 100%, 94%);
+
+    /*######## Neutral colors #######*/
+      --darkest-blue: hsl(220, 13%, 13%);
+      --dark-grayish-blue: hsl(219, 9%, 45%);
+      --grayish-blue: hsl(220, 14%, 75%);
+      --light-grayish-blue: hsl(223, 64%, 98%);
+      --white: hsl(0, 0%, 100%);
+      --black: hsla(0, 0%, 0%, 0.75);
+
+     /*##### Font Weight #####*/
+      --fw-reg: 400;
+      --fw--bold: 700;
+    
+      /*######### Font sizes #########*/
+      --fs-body: 16px;
+      --fs-h1: 3rem;
+      --fs-h2: 2.25rem;
+      --fs-h3: 1.25rem;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--fm-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    background: var(--white);
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+/*########### Header ###########*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+/* .underline {
+    display: none;
+} */
+
+
+.header__logo {
+   margin-right: auto;
+   margin-left: 1em;
+}
+
+.avatar__pic {
+   width: 25px;
+   margin-left: 1em;
+}
+.avatar__pic:hover {
+    border: 3px solid var(--prim-orange);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header__menu--btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .header {
+        width: 90vw;
+        height: 80px;
+        padding: 0;
+        margin: 0 auto;
+        border-bottom: 2px solid var(--grayish-blue);
+    }
+    .header__menu--btn {
+        display: none;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .header {
+        width: 80vw;   
+    }
+
+    .avatar__pic {
+        width: 50px;
+        margin-left: 2.5em;
+    }
+
+    
+}
+
+
+
+/*########## Naviation menu #############*/
+
+.header__nav {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .header__nav {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__logo {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .nav__list {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: var(--dark-grayish-blue);
+       font-size: 0.9rem;
+    }
+
+    .nav__link {
+        padding-left: 1em;
+    }
+
+    .nav__link:hover a {
+        border-bottom: 3px solid var(--prim-orange);
+        padding-bottom: 2em;
+    }
+}
+
+@media (min-width:800px) {
+    .header__nav {
+        margin-right: auto;
+        margin-left: 3em;
+    }
+
+    .nav__link {
+        padding-left: 2em;
+    }
+    .nav__link:hover a {
+        padding-bottom: 1.8em;
+    }
+    .nav__list {
+        font-size: var(--fs-body);
+    }
+}
